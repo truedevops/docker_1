@@ -1,6 +1,6 @@
-1 mkdir nextcloud && cd nextcloud
-2 git clone https://github.com/truedevops/docker_1.git
-3 docker-compose up -d
+1 git clone https://github.com/truedevops/docker_1.git
+2 cd docker_1
+3 docker-compose up -d     Ждём, пока docker выкачает все image-ы.
 4 wget https://download.nextcloud.com/server/releases/nextcloud-13.0.1.zip
 5 apt install zip - Если есть zip - пропускаем этот шаг
 6 unzip nextcloud-13.0.1.zip
