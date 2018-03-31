@@ -1,0 +1,32 @@
+nginx:
+ image: truedevops/nginx
+ ports:
+  - 88:80
+ volumes:
+  - ./logs:/etc/logs/nginx/
+ volumes_from:
+  - fpm:rw
+ environment:
+  - NGINX_HOST=localhost
+  - NGINX_PORT=80
+ links:
+  - fpm
+fpm:
+  image: truedevops/php7.2-fpm
+  volumes:
+   - ./php-code:/var/www/html/:rw
+  links:
+   - memcached
+   - mysql
+memcached:
+  image: truedevops/memcached
+mysql:
+  image: truedevops/mysql5.7
+  volumes:
+   - ./DB_data:/var/lib/mysql
+  restart: always
+  environment:
+   - MYSQL_ROOT_PASSWORD=password
+   - MYSQL_DATABASE=db
+   - MYSQL_USER=user
+   - MYSQL_PASSWORD=password
