@@ -1,4 +1,3 @@
-# docker_1
 1 mkdir nextcloud && cd nextcloud
 2 git clone https://github.com/truedevops/docker_1.git
 3 docker-compose up -d
