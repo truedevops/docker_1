@@ -1,5 +1,5 @@
 nginx:
- image: truedevops/nginx
+ image: truedevops/nginx_alpine
  ports:
   - 88:80
  volumes:
