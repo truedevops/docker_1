@@ -17,9 +17,12 @@
 
 настройка кэширующего сервера memcached -> vim php-code/nextcloud/config/config.php
 
-нужно вставить после строчки  array (
+нужно вставить после этого блока:
+array (
     0 => 'ххх.ххх.хх.х:88',
   ),
+
+Вот этот вот блок:
 
 'memcache.local' => '\\OC\\Memcache\\Memcached',
   'memcached_servers' =>
