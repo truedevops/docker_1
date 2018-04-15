@@ -22,14 +22,11 @@
 
 Вот этот вот блок:
 
-  'memcache.local' => '\OC\Memcache\APCu',
-  'memcache.distributed' => '\OC\Memcache\Memcached',
-  'memcached_servers' =>
-   array (
-    0 =>
-    array (
-      0 => 'memcached',
-      1 => 11211,
-    ),
-  ),
+  'memcache.local' => '\\OC\\Memcache\\APCu',
+  'memcache.distributed' => '\\OC\\Memcache\\Memcached',
+  'memcached_servers' => array(
+     array('memcached', 11211),
+     array('memcached_1', 11211),
+     array('memcached_2', 11211),
+     ),
 
