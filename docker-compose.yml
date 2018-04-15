@@ -19,6 +19,7 @@ fpm:
    - memcached
    - memcached_1
    - memcached_2
+   - redis
    - mysql
 memcached:
   image: truedevops/memcached
@@ -26,6 +27,8 @@ memcached_1:
   image: truedevops/memcached
 memcached_2:
   image: truedevops/memcached
+redis:
+  image: truedevops/redis
 mysql:
   image: truedevops/mysql5.7
   volumes:
