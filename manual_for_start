@@ -20,7 +20,7 @@
 нужно вставить после этой строки:
 'installed' => true,
 
-Вот этот вот блок:
+Вот этот вот блок memcached:
 
   'memcache.local' => '\\OC\\Memcache\\APCu',
   'memcache.distributed' => '\\OC\\Memcache\\Memcached',
@@ -30,3 +30,11 @@
      array('memcached_2', 11211),
      ),
 
+For Redis:
+
+'memcache.local' => '\OC\Memcache\Redis',
+'memcache.locking' => '\OC\Memcache\Redis',
+'redis' => array(
+     'host' => 'redis',
+     'port' => 6379,
+      ),
