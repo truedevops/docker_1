@@ -17,8 +17,14 @@ fpm:
    - ./php-code:/var/www/html/:rw
   links:
    - memcached
+   - memcached_1
+   - memcached_2
    - mysql
 memcached:
+  image: truedevops/memcached
+memcached_1:
+  image: truedevops/memcached
+memcached_2:
   image: truedevops/memcached
 mysql:
   image: truedevops/mysql5.7
