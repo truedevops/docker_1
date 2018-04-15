@@ -30,7 +30,7 @@
      array('memcached_2', 11211),
      ),
 
-For Redis:
+Этот для Redis:
 
 'memcache.local' => '\OC\Memcache\Redis',
 'memcache.locking' => '\OC\Memcache\Redis',
